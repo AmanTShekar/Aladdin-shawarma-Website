@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aladin Shawarma</title>
+
+    <!-- 📦 Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- 🎨 Tailwind & Custom CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+
+    <!-- ============================= -->
+    <!-- 🔷 HEADER -->
+    <!-- ============================= -->
+<header class="relative top-0 left-0 right-0 z-50 flex justify-between items-center h-[70px] color - #000">
+  <!-- Left: Transparent Menu Button -->
+  <a href="#menu" class="menu-link">
+    <div class="menu-btn">
+      <i class="fa-solid fa-utensils"></i>
+      <span>Menu</span>
+    </div>
+  </a>
+
+  <!-- Center: Logo -->
+  <img src="images/logo.png" alt="Logo" class="header-logo h-12 object-contain">
+
+  <!-- Right: Book Table Button -->
+  <button class="book-table-btn">Book Table</button>
+</header>
+
+
+
+<!-- ============================= -->
+<!-- 🧭 NAVIGATION -->
+<!-- ============================= -->
+<nav id="navbar">
+  <div class="glass-nav">
+    
+    <!-- Logo on the left -->
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo">
+    </div>
+
+<div class="nav-links">
+  <a href="#home" class="nav-link">Home</a>
+  <a href="#about" class="nav-link">About</a>
+  <a href="#menu" class="nav-link">Menu</a>
+  <a href="#stories" class="nav-link">Stories</a>
+  <a href="#magic-scroll" class="nav-link">Magic Scroll</a>
+  <a href="#contact" class="nav-link">Find us</a>
+</div>
+
+
+    <!-- Burger menu button -->
+    <button id="menu1-toggle" class="menu1-btn">
+      <span class="burger-line line1"></span>
+      <span class="burger-line line2"></span>
+      <span class="burger-line line3"></span>
+    </button>
+
+  </div>
+
+<div id="mobile-menu1">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#menu">Menu</a>
+  <a href="#stories">Stories</a>
+  <a href="#magic-scroll">Magic Scroll</a>
+  <a href="#contact">Find us</a>
+</div>
+
+</nav>
+
+    <!-- ============================= -->
+    <!-- 🌌 HERO SECTION -->
+    <!-- ============================= -->
+    <section id="home" class="hero-section">
+        <h2 class="hero-heading">THE LEGEND ON A PLATE</h2>
+        <div class="royal-line"></div>
+
+        <div class="hero-description-wrapper">
+            <img src="images/logo.png" alt="Logo" class="hero-logo">
+            <p class="hero-description-text">
+                Born from Arabian nights and Kochi's streetlight hustle — each shawarma is a spell of spice and smoke. Crafted with ishtam, served with garvam, seasoned by the genie's touch.
+            </p>
+        </div>
+
+        <div class="hero-buttons">
+            <button class="hero-button primary">Order Now</button>
+            <button class="hero-button secondary">Reserve Table</button>
+        </div>
+
+        <div class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa- fa-instagram"></i></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></i></a>
+
+            <a href="#" class="social-icon"><i class="fab fa-x-twitter"></i></i></a>
+        </div>
+    </section>
+
+    <!-- ============================= -->
+    <!-- ⚡ INFO STRIP SECTION -->
+    <!-- ============================= -->
+    <section class="info-strip">
+        <div class="info-strip-content">
+            <span>AUTHENTIC MIDDLE EASTERN  </span>
+            <span>• CRAFTED WITH PASSION</span>
+            <span>• SERVED WITH PRIDE</span>
+            <span>• AUTHENTIC MIDDLE EASTERN</span>
+        </div>
+    </section>
+
+
+<!-- ============================= -->
+<!-- 🏛️ OUR STORY SECTION (image right) -->
+<!-- ============================= -->
+<section id="about" class="story-section">
+  <!-- Overlay image -->
+  <div class="story-overlay"></div>
+
+  <div class="story-inner">
+    <div class="story-content">
+
+      <!-- Left side: Text content -->
+      <div class="story-left">
+        <div class="story-pill">Our Story</div>
+
+        <h2 class="story-heading">
+          <span class="blue-text">Authentic Arabian</span><br>
+          <span class="gold-text">Flavors & Magic</span>
+        </h2>
+
+        <p class="story-description">
+          From humble beginnings to culinary excellence — our journey is defined by the love for authentic taste, meticulous craft, and an unbroken bond with our roots.
+        </p>
+
+        <!-- Feature Pills -->
+        <div class="feature-pills">
+          <div class="feature-pill">100% Halal</div>
+          <div class="feature-pill">Fresh Daily</div>
+          <div class="feature-pill">Premium Quality</div>
+        </div>
+      </div>
+
+      <!-- Right side: Image / SVG -->
+      <div class="story-right">
+        <img src="images/lamp.png" alt="Story Illustration" class="story-svg" />
+      </div>
+
+    </div>
+
+    <!-- Large Boxes -->
+    <div class="large-boxes">
+      <div class="large-box">
+        <h3 class="large-box-title">Legendary Taste</h3>
+        <div class="large-box-text">
+          <p>Step into a world where every shawarma is more than a meal — it's a story. Infused with Arabian magic and tempered with Kerala freshness, each bite delivers layers of spice, aroma, and tradition that linger long after the last bite.</p>
+        </div>
+      </div>
+
+      <div class="large-box">
+        <h3 class="large-box-title">Fresh Magic</h3>
+        <div class="large-box-text">
+          <p>Our commitment to freshness transforms ordinary ingredients into extraordinary flavors. Handpicked herbs, premium meats, and vibrant vegetables are wrapped in desert spices and cooked to perfection daily.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lower Boxes -->
+    <div class="small-boxes-equal">
+      <div class="small-box-eq">
+        <h4 class="small-box-heading">15+ Years</h4>
+        <p class="small-box-desc">Years Experience</p>
+      </div>
+      <div class="small-box-eq">
+        <h4 class="small-box-heading">50K+</h4>
+        <p class="small-box-desc">Happy Customers</p>
+      </div>
+      <div class="small-box-eq">
+        <h4 class="small-box-heading">25+</h4>
+        <p class="small-box-desc">Menu Items</p>
+      </div>
+      <div class="small-box-eq">
+        <h4 class="small-box-heading">4.9</h4>
+        <p class="small-box-desc">Customer Rating</p>
+      </div>
+    </div>
+
+    <!-- Explore Button -->
+    <div class="explore-wrapper">
+      <button class="explore-btn">Explore Our Menu</button>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<section id="menu" class="menu-section">
+  <div class="menu-overlay"></div>
+
+  <div class="menu-inner">
+    <div class="menu-pill">Each Shawarma, a Wish Granted</div>
+    <h2 class="menu-heading">The Genie’s Menu</h2>
+    <p class="menu-description">
+      Our menu is carved from Aladdin’s scroll itself — a mix of Arabian classics and Kochi street cravings, seasoned with a little mischief and a lot of magic.</p>
+
+    <!-- ✅ Only ONE menu-grid wrapper -->
+    <div class="menu-grid">
+      <!-- Example Card 1 -->
+      <div class="menu-card">
+        <img src="images/dish1.jpg" alt="Dish 1">
+        <div class="menu-card-content">
+          <p class="menu-item-price">₹299</p>
+          <h3 class="menu-item-name">Grilled Shawarma</h3>
+          <p class="menu-item-desc">Tender chicken wrapped with spices and herbs, grilled to perfection.</p>
+        </div>
+      </div>
+
+      <!-- Example Card 2 -->
+      <div class="menu-card">
+        <img src="images/dish1.jpg" alt="Dish 2">
+        <div class="menu-card-content">
+          <p class="menu-item-price">₹349</p>
+          <h3 class="menu-item-name">Falafel Wrap</h3>
+          <p class="menu-item-desc">Crispy falafels wrapped with creamy tahini and pickled veggies.</p>
+        </div>
+      </div>
+
+      <!-- Example Card 3 -->
+      <div class="menu-card">
+        <img src="images/dish1.jpg" alt="Dish 3">
+        <div class="menu-card-content">
+          <p class="menu-item-price">₹379</p>
+          <h3 class="menu-item-name">Arabian Platter</h3>
+          <p class="menu-item-desc">An exotic mix of grilled meats, dips, and fresh pita bread.</p>
+        </div>
+      </div>
+
+      <!-- Example Card 4 -->
+      <div class="menu-card">
+        <img src="images/dish1.jpg" alt="Dish 4">
+        <div class="menu-card-content">
+          <p class="menu-item-price">₹259</p>
+          <h3 class="menu-item-name">Classic Shawarma</h3>
+          <p class="menu-item-desc">Authentic flavors wrapped in warm pita and creamy sauces.</p>
+        </div>
+      </div>
+
+      <!-- Example Card 5 -->
+      <div class="menu-card">
+        <img src="images/dish2.webp" alt="Dish 5">
+        <div class="menu-card-content">
+          <p class="menu-item-price">₹299</p>
+          <h3 class="menu-item-name">Zinger Roll</h3>
+          <p class="menu-item-desc">Crispy chicken zinger wrapped with spicy mayo and lettuce.</p>
+        </div>
+      </div>
+
+      <!-- Example Card 6 -->
+      <div class="menu-card">
+        <img src="images/dish2.webp" alt="Dish 6">
+        <div class="menu-card-content">
+          <p class="menu-item-price">₹329</p>
+          <h3 class="menu-item-name">Cheesy Fries</h3>
+          <p class="menu-item-desc">Golden fries topped with creamy cheese and herbs.</p>
+        </div>
+      </div>
+
+      <!-- Example Card 7 -->
+      <div class="menu-card">
+        <img src="images/dish2.webp" alt="Dish 7">
+        <div class="menu-card-content">
+          <p class="menu-item-price">₹399</p>
+          <h3 class="menu-item-name">Mix Grill</h3>
+          <p class="menu-item-desc">A royal platter of grilled chicken, lamb, and kebabs.</p>
+        </div>
+      </div>
+
+      <!-- Example Card 8 -->
+      <div class="menu-card">
+        <img src="images/dish2.webp" alt="Dish 8">
+        <div class="menu-card-content">
+          <p class="menu-item-price">₹199</p>
+          <h3 class="menu-item-name">Hummus Delight</h3>
+          <p class="menu-item-desc">Smooth hummus served with olive oil and warm pita.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ✅ Button below cards -->
+    <button class="view-menu-btn">View Full Menu</button>
+  </div>
+</section>
+
+
+
+
+
+<section id="stories" class="story-section">
+  <div class="gallery-header">
+    <div class="royal-line">
+      <span class="diamond"></span>
+    </div>
+    <button class="gallery-pill">✦ VISUAL SHOWCASE ✦</button>
+    <h2 class="gallery-title">Our Gallery</h2>
+    <p class="gallery-subtitle">Discover the artistry behind our authentic Middle Eastern cuisine</p>
+  </div>
+
+  <div class="gallery-wrapper">
+    <button class="nav-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+
+    <div class="gallery-display">
+      <div class="gallery-image"><img src="images/gallery1.jpg" alt="Gallery 1"></div>
+      <div class="gallery-image"><img src="images/gallery2.jpg" alt="Gallery 2"></div>
+      <div class="gallery-image"><img src="images/gallery3.jpg" alt="Gallery 3"></div>
+      <div class="gallery-image"><img src="images/gallery4.jpg" alt="Gallery 4"></div>
+      <div class="gallery-image"><img src="images/gallery5.jpg" alt="Gallery 5"></div>
+      <div class="gallery-image"><img src="images/gallery6.jpg" alt="Gallery 6"></div>
+    </div>
+
+    <button class="nav-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <div class="gallery-indicators"></div>
+</section>
+
+
+
+
+
+
+
+<section class="testimonial-section" id="magic-scroll">
+  <div class="testimonial-header">
+    <div class="royal-line"><div class="diamond"></div></div>
+    <div class="testimonial-pill">Testimonials</div>
+    <h2 class="testimonial-title">What Our Customers Say</h2>
+    <p class="testimonial-subtitle">Real experiences from food lovers around the world</p>
+  </div>
+
+  <div class="testimonial-wrapper">
+
+    <div class="testimonial-box">
+      <div class="testimonial-heading">"Exceptional Taste & Service!"</div>
+      <div class="testimonial-text">
+        The shawarma here is absolutely delicious. Fresh ingredients, juicy meat, and the sauces are heavenly. Highly recommend!
+      </div>
+      <div class="testimonial-line"></div>
+      <div class="user-info">
+        <img src="images/user1.jpg" alt="User">
+        <div class="user-text">
+          <div class="name">Arjun Mehta</div>
+          <div class="location">Bangalore, India</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-box">
+      <div class="testimonial-heading">"Unforgettable Experience!"</div>
+      <div class="testimonial-text">
+        Loved every bite! The flavors are rich, authentic, and satisfying. The ambience adds a royal touch that completes the experience.
+      </div>
+      <div class="testimonial-line"></div>
+      <div class="user-info">
+        <img src="images/user2.jpg" alt="User">
+        <div class="user-text">
+          <div class="name">Sara Khan</div>
+          <div class="location">Mumbai, India</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-box">
+      <div class="testimonial-heading">"Perfect Blend of Flavors!"</div>
+      <div class="testimonial-text">
+        Amazing service and a truly delightful menu. The food presentation and hospitality make this place stand out from the rest!
+      </div>
+      <div class="testimonial-line"></div>
+      <div class="user-info">
+        <img src="images/user3.jpg" alt="User">
+        <div class="user-text">
+          <div class="name">Rohit Nair</div>
+          <div class="location">Chennai, India</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- === Stats Bar === -->
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="value">4.9</div>
+      <div class="label">Average Rating</div>
+    </div>
+
+    <div class="stat">
+      <div class="value">★ ★ ★ ★ ★</div>
+      <div class="subtext">Based on 500+ feedbacks</div>
+    </div>
+
+    <div class="stat">
+      <div class="value">98%</div>
+      <div class="label">Satisfaction Rate</div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section id="contact" class="contact-section">
+  <div class="contact-header">
+    <div class="contact-pill">Contact Us</div>
+    <h2 class="contact-title">Contact Us</h2>
+    <p class="contact-subtitle">Reach out for reservations, catering, or any questions about our flavorful Middle Eastern cuisine.</p>
+  </div>
+
+  <div class="contact-container">
+    <!-- LEFT SIDE -->
+    <div class="contact-info">
+      <!-- Location -->
+      <div class="info-box full-width">
+        <div class="info-header">
+          <div class="icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+          <h3 class="info-title">Address</h3>
+        </div>
+        <p class="info-text">Opp. Kaloor Stadium, Kochi</p>
+      </div>
+
+      <!-- Phone & Email Row -->
+      <div class="info-row">
+        <div class="info-box half-box">
+          <div class="info-header">
+            <div class="icon-circle"><i class="fas fa-phone-alt"></i></div>
+            <h3 class="info-title">Phone</h3>
+          </div>
+          <p class="info-text">+91 97450 12345</p>
+        </div>
+
+        <div class="info-box half-box">
+          <div class="info-header">
+            <div class="icon-circle"><i class="fas fa-envelope"></i></div>
+            <h3 class="info-title">Email</h3>
+          </div>
+          <p class="info-text">genie@aladdinshawarma.in</p>
+        </div>
+      </div>
+
+      <!-- Opening Hours -->
+      <div class="info-box full-width">
+        <div class="info-header">
+          <div class="icon-circle"><i class="fas fa-clock"></i></div>
+          <h3 class="info-title">Opening Hours</h3>
+        </div>
+        <p class="info-text">Mon–Sat: 9AM–10PM</p>
+        <div class="divider"></div>
+        <p class="info-text">Sunday: Closed</p>
+      </div>
+
+      <!-- Social Links -->
+      <div class="social-links1">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="contact-form">
+      <h3>Send Us a Message</h3>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="send-btn">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ===== FOOTER SECTION ===== -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- LEFT -->
+    <div class="footer-left">
+      <h2 class="footer-title">Aladdin Shawarma</h2>
+      <p class="footer-desc">Serving authentic Middle Eastern flavors made with love and passion. Taste the magic in every bite.</p>
+
+      <div class="footer-contact">
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Bangalore, India</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <span>+91 98765 43210</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>info@aladdinshawarma.com</span>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+
+    <!-- MIDDLE -->
+    <div class="footer-middle">
+      <h3 class="footer-heading">Opening Hours</h3>
+      <ul class="opening-hours">
+        <li><span>Monday</span><span>10:00 AM – 10:00 PM</span></li>
+        <li><span>Tuesday</span><span>10:00 AM – 10:00 PM</span></li>
+        <li><span>Wednesday</span><span>10:00 AM – 10:00 PM</span></li>
+        <li><span>Thursday</span><span>10:00 AM – 10:00 PM</span></li>
+        <li><span>Friday</span><span>10:00 AM – 11:00 PM</span></li>
+        <li><span>Saturday</span><span>10:00 AM – 11:00 PM</span></li>
+        <li><span>Sunday</span><span>Closed</span></li>
+      </ul>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="footer-right">
+      <h3 class="footer-heading">Join Our Newsletter</h3>
+      <p class="newsletter-desc">Stay updated with our latest offers, dishes, and special events.</p>
+
+      <div class="newsletter-box">
+        <input type="email" placeholder="Enter your email" />
+        <button>Subscribe</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Aladdin Shawarma. All Rights Reserved.
+  </div>
+</footer>
+
+</main>
+    <!-- ============================= -->
+    <!-- ⚙️ SCRIPT BELOW -->
+    <!-- ============================= -->
+    <script src="script.js"></script>
+
+</body>
+</html>
