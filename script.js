@@ -96,6 +96,32 @@ const updateMenuActiveDot = () => {
 menuGrid.addEventListener('scroll', updateMenuActiveDot);
 
 
+  const galleryDisplay = document.querySelector('.gallery-display');
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  function handleGesture() {
+    if (touchEndX < touchStartX - 50) {
+      document.querySelector('.right-btn').click(); // swipe left → next
+    }
+    if (touchEndX > touchStartX + 50) {
+      document.querySelector('.left-btn').click(); // swipe right → prev
+    }
+  }
+
+  galleryDisplay.addEventListener('touchstart', e => {
+    touchStartX = e.changedTouches[0].screenX;
+  });
+
+  galleryDisplay.addEventListener('touchend', e => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleGesture();
+  });
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   // Select all elements that should animate
   const animateEls = document.querySelectorAll(
@@ -119,3 +145,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
   animateEls.forEach(el => animateObserver.observe(el));
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const animatedElements = document.querySelectorAll(
+    '.in-view, .hero-buttons button, .explore-btn, .view-menu-btn, .send-btn'
+  );
+
+  animatedElements.forEach(el => {
+    el.addEventListener('animationend', () => {
+      el.classList.remove('in-view');
+      el.classList.add('animation-done');
+    });
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const elements = document.querySelectorAll('.hidden');
+
+  elements.forEach(el => {
+    el.classList.add('animate-in'); // triggers animation
+    el.addEventListener('animationend', () => {
+      el.classList.remove('hidden'); // remove hidden after animation
+      el.classList.remove('animate-in'); // cleanup
+    });
+  });
+});
+
+
+
+
+
