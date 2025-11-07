@@ -120,8 +120,9 @@ header {
 /* 🔷 NAVBAR */
 /* ============================= */
 #navbar {
-  position: relative;
+  position: absolute;
   width: 100%;
+  top:75px;
   backdrop-filter: blur(12px);
   z-index: 1000;
   transition: all 0.4s ease;
@@ -257,6 +258,9 @@ header {
   .logo img {
     display: block;
   }
+  #navbar{
+    top: 0;
+  }
 }
 
 /* Desktop: hide logo */
@@ -309,6 +313,7 @@ header {
   padding: 0;
   color: #fff;
   overflow: visible;
+  padding-top: 70px;
 }
 
 /* Heading */
