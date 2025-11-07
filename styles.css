@@ -1449,11 +1449,6 @@ header {
   }
 }
 
-/* --- Enable horizontal swipe for touch devices --- */
-.gallery-display {
-  touch-action: pan-x;
-  -webkit-overflow-scrolling: touch;
-}
 
 
 
@@ -1834,12 +1829,12 @@ header {
   border: 1.5px solid rgba(255, 179, 38, 0.6);
   border-radius: 16px;
   backdrop-filter: blur(20px);
-  padding: 2rem 1.8rem;             /* More padding for a flush look */
+  padding: 1.5rem 1.8rem;             /* More padding for a flush look */
   box-shadow: 0 0 25px rgba(255, 179, 38, 0.15);
   transition: all 0.35s ease;
   flex: 1;
-  min-width: 260px;
-  min-height: 180px;                /* Taller box height */
+  min-width: 220px;
+  min-height: 120px;                /* Taller box height */
   display: flex;
   flex-direction: column;
   justify-content: center;
