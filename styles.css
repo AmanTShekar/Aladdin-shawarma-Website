@@ -19,11 +19,12 @@ body {
 /* 🔷 HEADER */
 /* ============================= */
 header {
+  position: relative;
+  z-index: 2001;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
-  background-color: #000;
   height: 70px;
 }
 
@@ -44,6 +45,7 @@ header {
 }
 
 .menu-btn {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -251,6 +253,7 @@ header {
   height: 2rem;
   width: auto;
   display: none; /* Hidden by default */
+  z-index: 2001;
 }
 
 /* Show logo only when burger is visible (mobile) */
@@ -430,6 +433,7 @@ header {
   color: #0A0A0A;
 }
 .hero-button.primary:hover {
+  transform: translateY(-5px);
   background-color: #fcd34d;
 }
 
@@ -440,6 +444,7 @@ header {
   background-color: transparent;
 }
 .hero-button.secondary:hover {
+  transform: translateY(-5px);
   border-color: #fbbf24;
   color: #fbbf24;
 }
@@ -505,6 +510,12 @@ header {
 
   .social-icon {
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 140vh; /* increase height only on small devices */
   }
 }
 
@@ -679,7 +690,6 @@ header {
 }
 
 .large-box:hover {
-  transform: translateY(-8px);
   box-shadow: 0 12px 25px rgba(255, 215, 0, 0.25);
 }
 
@@ -688,7 +698,7 @@ header {
   font-size: 1.6rem;
   font-weight: 700;
   color: #0B3A6B;
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .large-box-text p {
@@ -2023,9 +2033,9 @@ header {
 
   .info-box {
     width: 100%;
-    max-width: 400px;
-    padding: 1.8rem 1.4rem;
-    min-height: 200px;           /* taller mobile boxes */
+    max-width: 450px;
+    padding: 1.5rem 4rem;
+    min-height: 150px;           /* taller mobile boxes */
   }
 
   .info-header {
@@ -2342,10 +2352,7 @@ header {
 
 
 /* ============================= */
-/* 🌌 ELEMENT ANIMATIONS EXTENDED */
-/* ============================= */
-
-/* Default hidden states for all animated elements */
+/* 🌌 Base hidden state for all animated elements */
 nav,
 .hero-heading,
 .hero-description-wrapper,
@@ -2365,176 +2372,116 @@ nav,
 .contact-form,
 footer {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(60px) scale(0.95);
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* ============================= */
-/* ✨ NAVBAR REVEAL */
-nav.in-view {
-  animation: navReveal 0.8s forwards;
-}
-
-@keyframes navReveal {
-  0% { opacity: 0; transform: translateY(-50px); }
-  100% { opacity: 1; transform: translateY(0); }
+/* 🌟 Active state triggers reveal */
+.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 /* ============================= */
-/* ✨ TEXT REVEAL */
-.hero-heading.in-view,
-.hero-description-wrapper.in-view,
-.story-heading.in-view,
-.menu-heading.in-view,
-.testimonial-title.in-view,
-.contact-title.in-view {
-  animation: textReveal 0.8s forwards;
+/* 🌟 Slide-in Left/Right for story sections */
+.story-left {
+  transform: translateX(-100px) scale(0.95);
 }
-
-@keyframes textReveal {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
+.story-right {
+  transform: translateX(100px) scale(0.95);
 }
-
-/* ============================= */
-/* ✨ BOX / CARD ANIMATIONS */
-.large-box.in-view,
-.small-box-eq.in-view,
-.menu-card.in-view,
-.testimonial-box.in-view,
-.gallery-section.in-view,
-.contact-section.in-view,
-.contact-info.in-view,
-.contact-form.in-view,
-footer.in-view {
-  animation: boxReveal 0.8s forwards;
-}
-
-@keyframes boxReveal {
-  0% { opacity: 0; transform: translateY(40px); }
-  100% { opacity: 1; transform: translateY(0); }
+.story-left.active,
+.story-right.active {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  transition: transform 1.3s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 1.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* ============================= */
-/* ✨ SLIDE-IN LEFT / RIGHT VARIATIONS */
-.story-left.in-view {
-  animation: slideLeft 0.8s forwards;
+/* 🌟 Hero Buttons - pop effect with stagger */
+.hero-buttons button.active,
+.explore-btn.active,
+.view-menu-btn.active,
+.send-btn.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.story-right.in-view {
-  animation: slideRight 0.8s forwards;
-}
+/* Stagger delays using CSS variables */
+[data-delay] { transition-delay: var(--delay, 0s); }
+.hero-buttons button:nth-child(1) { --delay: 0.3s; }
+.hero-buttons button:nth-child(2) { --delay: 0.5s; }
+.explore-btn { --delay: 0.7s; }
+.view-menu-btn { --delay: 0.9s; }
+.send-btn { --delay: 1.1s; }
 
-@keyframes slideLeft {
-  0% { opacity: 0; transform: translateX(-50px); }
-  100% { opacity: 1; transform: translateX(0); }
-}
 
-@keyframes slideRight {
-  0% { opacity: 0; transform: translateX(50px); }
-  100% { opacity: 1; transform: translateX(0); }
-}
 
 /* ============================= */
-/* ✨ HERO BUTTONS / CTA REVEAL */
-.hero-buttons button.in-view,
-.explore-btn.in-view,
-.view-menu-btn.in-view,
-.send-btn.in-view {
-  animation: buttonReveal 0.6s forwards;
+/* 🌟 Bounce-in for entrance */
+@keyframes bounceInSmooth {
+  0%   { opacity: 0; transform: translateY(80px) scale(0.95); }
+  60%  { opacity: 1; transform: translateY(-16px) scale(1.04); }
+  80%  { transform: translateY(8px) scale(0.98); }
+  100% { transform: translateY(0) scale(1); }
+}
+.active.bounce {
+  animation: bounceInSmooth 1.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.hero-buttons button.in-view:nth-child(1) { animation-delay: 0.3s; }
-.hero-buttons button.in-view:nth-child(2) { animation-delay: 0.5s; }
-.explore-btn.in-view { animation-delay: 0.7s; }
-.view-menu-btn.in-view { animation-delay: 0.8s; }
-.send-btn.in-view { animation-delay: 0.6s; }
 
-@keyframes buttonReveal {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
+
+
 
 /* ============================= */
-/* ✨ STAGGERED DELAYS FOR BOXES & CARDS */
-.large-box.in-view:nth-child(1) { animation-delay: 0.2s; }
-.large-box.in-view:nth-child(2) { animation-delay: 0.4s; }
-
-.small-box-eq.in-view:nth-child(1) { animation-delay: 0.2s; }
-.small-box-eq.in-view:nth-child(2) { animation-delay: 0.4s; }
-.small-box-eq.in-view:nth-child(3) { animation-delay: 0.6s; }
-.small-box-eq.in-view:nth-child(4) { animation-delay: 0.8s; }
-
-.menu-card.in-view:nth-child(1) { animation-delay: 0.1s; }
-.menu-card.in-view:nth-child(2) { animation-delay: 0.2s; }
-.menu-card.in-view:nth-child(3) { animation-delay: 0.3s; }
-.menu-card.in-view:nth-child(4) { animation-delay: 0.4s; }
-.menu-card.in-view:nth-child(5) { animation-delay: 0.5s; }
-.menu-card.in-view:nth-child(6) { animation-delay: 0.6s; }
-.menu-card.in-view:nth-child(7) { animation-delay: 0.7s; }
-.menu-card.in-view:nth-child(8) { animation-delay: 0.8s; }
-
-.testimonial-box.in-view:nth-child(1) { animation-delay: 0.2s; }
-.testimonial-box.in-view:nth-child(2) { animation-delay: 0.4s; }
-.testimonial-box.in-view:nth-child(3) { animation-delay: 0.6s; }
-
-.gallery-section.in-view { animation-delay: 0.3s; }
-
-.contact-section.in-view { animation-delay: 0.2s; }
-.contact-info.in-view { animation-delay: 0.4s; }
-.contact-form.in-view { animation-delay: 0.6s; }
-
-footer.in-view { animation-delay: 0.2s; }
-
+/* ✨ Floating Glow — Curtain Drop */
 /* ============================= */
-/* 🌟 Hover effects */
-.hero-button:hover,
-.explore-btn:hover,
-.view-menu-btn:hover,
-.menu-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  transition: transform 0.3s ease;
+.floating-glow {
+  position: fixed;
+  top: 0%;       /* start off-screen above */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  pointer-events: none;
+  z-index: 2000;
+  opacity: 1;
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.6));
+  animation: curtainDrop 1.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-/* Remove !important from in-view transforms */
-.large-box.in-view,
-.small-box-eq.in-view,
-.menu-card.in-view,
-.testimonial-box.in-view,
-.info-box.in-view,
-.contact-form.in-view {
-  animation-fill-mode: forwards;
+/* Curtain drop keyframes */
+@keyframes curtainDrop {
+  0% {
+    top: -300px;
+    opacity: 0;
+  }
+  100% {
+    top:0%;     /* final resting place */
+    opacity: 1;
+  }
 }
 
-
-
-/* Keep final state for animation-done */
-.animation-done {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
+/* Optional: gentle floating after drop */
+.floating-glow.float-loop {
+  animation: gentleSway 5s ease-in-out infinite alternate,
+             softShimmer 3.5s ease-in-out infinite alternate;
 }
 
-/* Hover effects now work normally */
-.large-box.animation-done:hover,
-.small-box-eq.animation-done:hover,
-.menu-card.animation-done:hover,
-.testimonial-box.animation-done:hover,
-.hero-button.animation-done:hover,
-.explore-btn.animation-done:hover,
-.view-menu-btn.animation-done:hover,
-.send-btn.animation-done:hover {
-  transform: translateY(-5px) scale(1.02);
-  transition: transform 0.3s ease;
+/* Left-right subtle sway */
+@keyframes gentleSway {
+  0% { transform: translateX(-50%) rotate(-0.1deg); }
+  50% { transform: translateX(-49%) rotate(.1deg); }
+  100% { transform: translateX(-50%) rotate(-0.1deg); }
 }
 
-/* Keep transitions smooth */
-.large-box,
-.small-box-eq,
-.menu-card,
-.testimonial-box,
-.hero-button,
-.explore-btn,
-.view-menu-btn,
-.send-btn {
-  transition: transform 0.3s ease;
+/* Soft shimmering glow */
+@keyframes softShimmer {
+  0% { filter: drop-shadow(0 0 6px rgba(255, 220, 100, 0.5)); }
+  50% { filter: drop-shadow(0 0 14px rgba(255, 255, 180, 0.9)); }
+  100% { filter: drop-shadow(0 0 6px rgba(255, 220, 100, 0.5)); }
 }
-
