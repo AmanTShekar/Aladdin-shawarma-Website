@@ -147,32 +147,33 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const animatedElements = document.querySelectorAll(
-    '.in-view, .hero-buttons button, .explore-btn, .view-menu-btn, .send-btn'
+// =============================
+// Scroll Reveal Animations
+// =============================
+document.addEventListener("DOMContentLoaded", () => {
+  const revealEls = document.querySelectorAll(
+    "nav, .hero-heading, .hero-description-wrapper, .hero-buttons button, .explore-btn, .view-menu-btn, .send-btn, .story-left, .story-right, .large-box, .small-box-eq, .menu-card, .testimonial-box, .gallery-section, .contact-section, .contact-info, .contact-form, footer"
   );
 
-  animatedElements.forEach(el => {
-    el.addEventListener('animationend', () => {
-      el.classList.remove('in-view');
-      el.classList.add('animation-done');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active'); // triggers CSS reveal
+        observer.unobserve(entry.target); // animate once
+      }
     });
-  });
-});
+  }, { threshold: 0.2 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const elements = document.querySelectorAll('.hidden');
-
-  elements.forEach(el => {
-    el.classList.add('animate-in'); // triggers animation
-    el.addEventListener('animationend', () => {
-      el.classList.remove('hidden'); // remove hidden after animation
-      el.classList.remove('animate-in'); // cleanup
-    });
-  });
+  revealEls.forEach(el => observer.observe(el));
 });
 
 
+
+const glow = document.querySelector('.floating-glow');
+
+glow.addEventListener('animationend', () => {
+  glow.classList.add('float-loop'); // start infinite sway + shimmer
+});
 
 
 
