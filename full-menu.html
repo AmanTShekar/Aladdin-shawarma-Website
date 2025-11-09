@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Menu - Aladdin Shawarma</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Montserrat:wght@600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Tailwind & Custom CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="body">
+
+  <!-- Floating Glow Lamp -->
+  <img src="images/glow.png" alt="Magic Glow" class="floating-glow">
+
+  <!-- ============================= -->
+  <!-- Header -->
+  <!-- ============================= -->
+  <header class="header">
+    <a href="index.html" class="menu-btn">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span>Home</span>
+    </a>
+
+    <img src="images/logo.png" alt="Logo" class="header-logo h-12 object-contain">
+
+    <a href="#contact" class="book-table-btn">Book Table</a>
+  </header>
+  
+
+  <!-- ============================= -->
+  <!-- 🍽️ Full Menu Section -->
+  <!-- ============================= -->
+  <section class="menu-section">
+    <div>
+    <div class="menu-overlay"></div>
+    <div class="menu-inner text-center">
+    
+      <div class="menu-pill">Menu</div>
+      <h2 class="menu-heading">The Genie’s Full  Menu</h2>
+      <p class="menu-description">
+        Explore a magical assortment of Middle Eastern classics, Kochi specials, and fusion favorites — crafted fresh for your cravings.
+      </p>
+
+<div class="category-buttons">
+  <button class="category-btn active" data-category="all">All</button>
+  <button class="category-btn" data-category="starters">Starters</button>
+  <button class="category-btn" data-category="main-course">Main Course</button>
+  <button class="category-btn" data-category="desserts">Desserts</button>
+  <button class="category-btn" data-category="beverages">Beverages</button>
+</div>
+
+
+
+
+ <!-- ============================= -->
+<!-- 🍴 FULL MENU PAGE -->
+<!-- ============================= -->
+
+<div class="menu-grid" id="menu-grid">
+
+  <!-- ⭐ STARTERS -->
+  <div class="menu-card" data-category="starters">
+    <img src="images/starter.jpg" alt="Hummus & Pita">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹199</p>
+      <h3 class="menu-item-name">Hummus & Pita</h3>
+      <p class="menu-item-desc">Creamy hummus served with olive oil, herbs, and warm pita bread.</p>
+    </div>
+  </div>
+
+  <div class="menu-card" data-category="starters">
+    <img src="images/starter.jpg" alt="Falafel">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹249</p>
+      <h3 class="menu-item-name">Crispy Falafel Balls</h3>
+      <p class="menu-item-desc">Golden chickpea falafels served with tahini sauce.</p>
+    </div>
+  </div>
+
+  <div class="menu-card" data-category="starters">
+    <img src="images/starter.jpg" alt="Loaded Fries">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹229</p>
+      <h3 class="menu-item-name">Loaded Fries</h3>
+      <p class="menu-item-desc">Crispy fries topped with melted cheese, herbs, and spicy mayo.</p>
+    </div>
+  </div>
+
+  <div class="menu-card" data-category="starters">
+    <img src="images/starter.jpg" alt="Chicken Popcorn">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹249</p>
+      <h3 class="menu-item-name">Chicken Popcorn</h3>
+      <p class="menu-item-desc">Crispy, bite-sized chicken coated in our secret spice mix.</p>
+    </div>
+  </div>
+
+  <!-- 🍗 MAIN COURSE -->
+  <div class="menu-card" data-category="main-course">
+    <img src="images/dish1.jpg" alt="Grilled Chicken">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹399</p>
+      <h3 class="menu-item-name">Grilled Chicken Steak</h3>
+      <p class="menu-item-desc">Juicy chicken breast grilled with herbs and served with butter rice.</p>
+    </div>
+  </div>
+
+  <div class="menu-card" data-category="main-course">
+    <img src="images/dish1.jpg" alt="Arabian Rice Bowl">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹349</p>
+      <h3 class="menu-item-name">Arabian Rice Bowl</h3>
+      <p class="menu-item-desc">Saffron rice served with spiced chicken and creamy garlic sauce.</p>
+    </div>
+  </div>
+
+  <div class="menu-card" data-category="main-course">
+    <img src="images/dish1.jpg" alt="Grilled Shawarma">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹299</p>
+      <h3 class="menu-item-name">Grilled Shawarma</h3>
+      <p class="menu-item-desc">Tender chicken wrapped with spices and herbs, grilled to perfection.</p>
+    </div>
+  </div>
+
+  <div class="menu-card" data-category="main-course">
+    <img src="images/dish1.jpg" alt="Arabian Platter">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹379</p>
+      <h3 class="menu-item-name">Arabian Platter</h3>
+      <p class="menu-item-desc">An exotic mix of grilled meats, dips, and fresh pita bread.</p>
+    </div>
+  </div>
+
+  <div class="menu-card" data-category="main-course">
+    <img src="images/dish2.webp" alt="Tandoori Wrap">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹329</p>
+      <h3 class="menu-item-name">Tandoori Wrap</h3>
+      <p class="menu-item-desc">Tandoori chicken wrapped with onions, mint chutney, and mayo.</p>
+    </div>
+  </div>
+
+  <div class="menu-card" data-category="main-course">
+    <img src="images/dish2.webp" alt="Butter Chicken Bowl">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹399</p>
+      <h3 class="menu-item-name">Butter Chicken Bowl</h3>
+      <p class="menu-item-desc">Classic Indian butter chicken served with naan or rice.</p>
+    </div>
+  </div>
+
+  <div class="menu-card" data-category="main-course">
+    <img src="images/dish2.webp" alt="Falafel Wrap">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹349</p>
+      <h3 class="menu-item-name">Falafel Wrap</h3>
+      <p class="menu-item-desc">Crispy falafels wrapped with creamy tahini and pickled veggies.</p>
+    </div>
+  </div>
+
+  <div class="menu-card" data-category="main-course">
+    <img src="images/dish2.webp" alt="Zinger Roll">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹299</p>
+      <h3 class="menu-item-name">Zinger Roll</h3>
+      <p class="menu-item-desc">Crispy chicken zinger wrapped with spicy mayo and lettuce.</p>
+    </div>
+  </div>
+
+  <!-- 🌯 SHAWARMAS -->
+  <div class="menu-card" data-category="shawarmas">
+    <img src="images/shawarma.jpg" alt="Classic Shawarma">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹299</p>
+      <h3 class="menu-item-name">Classic Chicken Shawarma</h3>
+      <p class="menu-item-desc">Authentic Arabian-style wrap with veggies and garlic sauce.</p>
+    </div>
+  </div>
+
+  <div class="menu-card" data-category="shawarmas">
+    <img src="images/shawarma.jpg" alt="Zinger Shawarma">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹329</p>
+      <h3 class="menu-item-name">Zinger Shawarma</h3>
+      <p class="menu-item-desc">Crispy zinger fillet wrapped with lettuce and fiery mayo.</p>
+    </div>
+  </div>
+
+  <div class="menu-card" data-category="shawarmas">
+    <img src="images/shawarma.jpg" alt="Cheesy Shawarma">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹349</p>
+      <h3 class="menu-item-name">Cheesy Shawarma</h3>
+      <p class="menu-item-desc">Stuffed with molten cheese and herbs for that creamy bite.</p>
+    </div>
+  </div>
+
+  <div class="menu-card" data-category="shawarmas">
+    <img src="images/shawarma.jpg" alt="Peri Peri Shawarma">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹359</p>
+      <h3 class="menu-item-name">Peri-Peri Shawarma</h3>
+      <p class="menu-item-desc">Hot & spicy twist with our signature peri-peri mayo.</p>
+    </div>
+  </div>
+
+  <!-- 🍗 PLATTERS -->
+  <div class="menu-card" data-category="platters">
+    <img src="images/platter.png" alt="Arabian Mix">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹449</p>
+      <h3 class="menu-item-name">Arabian Mix Platter</h3>
+      <p class="menu-item-desc">A rich assortment of kebabs, grilled chicken, hummus, and pita.</p>
+    </div>
+  </div>
+
+  <div class="menu-card" data-category="platters">
+    <img src="images/platter.png" alt="Mixed Grill">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹499</p>
+      <h3 class="menu-item-name">Mixed Grill Platter</h3>
+      <p class="menu-item-desc">Juicy lamb, chicken, and beef skewers grilled to perfection.</p>
+    </div>
+  </div>
+
+  <!-- 🥤 BEVERAGES -->
+  <div class="menu-card" data-category="beverages">
+    <img src="images/drink.jpg" alt="Mint Lemonade">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹149</p>
+      <h3 class="menu-item-name">Mint Lemonade</h3>
+      <p class="menu-item-desc">Refreshing minty drink to cool your senses.</p>
+    </div>
+  </div>
+
+  <div class="menu-card" data-category="beverages">
+    <img src="images/drink.jpg" alt="Cold Coffee">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹179</p>
+      <h3 class="menu-item-name">Cold Coffee</h3>
+      <p class="menu-item-desc">Chilled coffee blended with cream and sugar.</p>
+    </div>
+  </div>
+
+  <!-- 🍮 DESSERTS -->
+  <div class="menu-card" data-category="desserts">
+    <img src="images/drink.jpg" alt="Baklava">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹199</p>
+      <h3 class="menu-item-name">Baklava</h3>
+      <p class="menu-item-desc">Layers of flaky pastry with honey and crushed nuts.</p>
+    </div>
+  </div>
+
+  <div class="menu-card" data-category="desserts">
+    <img src="images/drink.jpg" alt="Date Cake">
+    <div class="menu-card-content">
+      <p class="menu-item-price">₹179</p>
+      <h3 class="menu-item-name">Date & Honey Cake</h3>
+      <p class="menu-item-desc">Moist sponge cake with natural sweetness of dates & honey.</p>
+    </div>
+  </div>
+
+</div>
+
+
+      <!-- Back Button -->
+      <div class="mt-12 text-center">
+        <!-- Example Back Button -->
+        <a href="index.html" class="back-home-btn">← Back to Home</a>
+      </div>
+    </div>
+  </section>
+
+
+<!-- ===== FOOTER SECTION ===== -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- LEFT -->
+    <div class="footer-left">
+      <h2 class="footer-title">Aladdin Shawarma</h2>
+      <p class="footer-desc">Serving authentic Middle Eastern flavors made with love and passion. Taste the magic in every bite.</p>
+
+      <div class="footer-contact">
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Bangalore, India</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <span>+91 98765 43210</span>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <span>info@aladdinshawarma.com</span>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+      </div>
+    </div>
+
+    <!-- MIDDLE -->
+    <div class="footer-middle">
+      <h3 class="footer-heading">Opening Hours</h3>
+      <ul class="opening-hours">
+        <li><span>Monday</span><span>10:00 AM – 10:00 PM</span></li>
+        <li><span>Tuesday</span><span>10:00 AM – 10:00 PM</span></li>
+        <li><span>Wednesday</span><span>10:00 AM – 10:00 PM</span></li>
+        <li><span>Thursday</span><span>10:00 AM – 10:00 PM</span></li>
+        <li><span>Friday</span><span>10:00 AM – 11:00 PM</span></li>
+        <li><span>Saturday</span><span>10:00 AM – 11:00 PM</span></li>
+        <li><span>Sunday</span><span>Closed</span></li>
+      </ul>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="footer-right">
+      <h3 class="footer-heading">Join Our Newsletter</h3>
+      <p class="newsletter-desc">Stay updated with our latest offers, dishes, and special events.</p>
+
+      <div class="newsletter-box">
+        <input type="email" placeholder="Enter your email" />
+        <button>Subscribe</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Aladdin Shawarma. All Rights Reserved.
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
